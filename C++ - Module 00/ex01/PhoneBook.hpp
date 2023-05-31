@@ -9,9 +9,10 @@ class PhoneBook {
 		bool	filled;
 	public:
 		PhoneBook(void);
-		void	add(Contact newContact);
-		void	display(void);
-		Contact	*getContacts(void);
+		void		add(Contact newContact);
+		void		display(void);
+		Contact		*getContacts(void);
+		int			requestIndex(void);
 };
 
 #define PHONEBOOK_HPP
