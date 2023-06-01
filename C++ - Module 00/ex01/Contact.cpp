@@ -3,28 +3,35 @@
 #include <iostream>
 
 Contact::Contact(void) {
-	data[0] = &firstName,
-	data[1] = &lastName,
-	data[2] = &nickname,
-	data[3] = &phoneNumber,
-	data[4] = &darkestSecret;
+
 }
 
-std::string Contact::getData(dataField field) {
-	// return *(*this->data + field);
-	return *(data[field]);
+std::string *Contact::getDataAddr(dataField field) {
+	switch (field) {
+	case firstName:
+		return &_firstName;
+	case lastName:
+		return &_lastName;
+	case nickname:
+		return &_nickname;
+	case phoneNumber:
+		return &_phoneNumber;
+	case darkestSecret:
+		return &_darkestSecret;
+	}
 }
 
 void	Contact::display(void) {
-	if (!firstName.size()) {
+	if (!_firstName.size()) {
 		std::cout << "Contact not found!" << std::endl;
 		return ;
 	}
 	std::cout << "Contact infos:" << std::endl;
-	std::cout << "		First name: " << firstName << std::endl;
-	std::cout << "		Last name: " << lastName << std::endl;
-	std::cout << "		Nicknake: " << nickname << std::endl;
-	std::cout << "		Darkest secret: " << darkestSecret << std::endl;
+	std::cout << "		First name: " << _firstName << std::endl;
+	std::cout << "		Last name: " << _lastName << std::endl;
+	std::cout << "		Nickname: " << _nickname << std::endl;
+	std::cout << "		Phone number: " << _phoneNumber << std::endl;
+	std::cout << "		Darkest secret: " << _darkestSecret << std::endl;
 }
 
 void Contact::requestData(dataField field) {
@@ -32,7 +39,7 @@ void Contact::requestData(dataField field) {
 	while (!std::cin.eof()) {
 		std::getline(std::cin, input);
 		if (input.size()) {
-			*(data[field]) = input;
+			*getDataAddr(field) = input;
 			std::cout << std::endl;
 			return ;
 		}

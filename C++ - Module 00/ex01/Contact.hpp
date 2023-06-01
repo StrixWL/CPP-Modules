@@ -12,15 +12,14 @@ enum dataField {
 
 class Contact {
 	private:
-		std::string	firstName;
-		std::string	lastName;
-		std::string	phoneNumber;
-		std::string	darkestSecret;
-		std::string	*data[5];
+		std::string	_firstName;
+		std::string	_lastName;
+		std::string	_phoneNumber;
+		std::string	_darkestSecret;
+		std::string	_nickname;
 	public:
-		std::string	nickname;
 		Contact(void);
-		std::string	getData(dataField field);
+		std::string	*getDataAddr(dataField field);
 		void		requestData(dataField field);
 		void		display(void);
 };

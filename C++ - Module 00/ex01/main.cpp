@@ -2,7 +2,7 @@
 #include "PhoneBook.hpp"
 #include <iostream>
 
-Contact	setContact(PhoneBook myBook) {
+Contact	setContact(void) {
 		Contact newContact;
 		std::cout << "Enter the contact first name: ";
 		newContact.requestData(firstName);
@@ -14,7 +14,6 @@ Contact	setContact(PhoneBook myBook) {
 		newContact.requestData(phoneNumber);
 		std::cout << "Enter the contact darkest secret: ";
 		newContact.requestData(darkestSecret);
-			myBook.display();
 		return newContact;
 }
 
@@ -31,8 +30,7 @@ int main(void) {
 			myBook.getContacts()[myBook.requestIndex()].display();
 		}
 		if (input == "ADD") {
-			myBook.display();
-			myBook.add(setContact(myBook));
+			myBook.add(setContact());
 		}
 	}
 	std::cout << std::endl << "stdin closed, terminating the process.." << std::endl;

@@ -4,9 +4,9 @@
 
 class PhoneBook {
 	private:
-		Contact contacts[8];
-		int		index;
-		bool	filled;
+		Contact _contacts[8];
+		int		_index;
+		bool	_filled;
 	public:
 		PhoneBook(void);
 		void		add(Contact newContact);
