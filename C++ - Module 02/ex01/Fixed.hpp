@@ -5,8 +5,8 @@
 class Fixed {
 	private:
 		const int	_fractionalBits;
-	public:
 		int			_fixedPoint;
+	public:
 		Fixed(void); // default constructor
 		~Fixed(); // destructor
 		Fixed(const Fixed &obj); // copy constructor
@@ -21,7 +21,6 @@ class Fixed {
 
 std::ostream &operator<<(std::ostream &o, const Fixed &obj);
 int	pow2(int n);
-void operator<<(Fixed a, Fixed b);
 
 #define FIXED_HPP
 #endif

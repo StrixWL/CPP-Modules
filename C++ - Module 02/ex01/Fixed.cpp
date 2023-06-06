@@ -52,7 +52,7 @@ float	Fixed::toFloat(void) const {
 }
 
 int	Fixed::toInt(void) const {
-	return _fixedPoint >> _fractionalBits ;
+	return _fixedPoint >> _fractionalBits;
 }
 
 std::ostream &operator<<(std::ostream &o, const Fixed &obj) {
