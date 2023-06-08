@@ -5,7 +5,7 @@
 #include "WrongAnimal.hpp"
 #include <iostream>
 
-void f() {
+int main() {	
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 	delete j;
@@ -20,16 +20,10 @@ void f() {
 		delete animals[i];
 	Dog basic;
 	for (int i = 0; i < 100; i++)
-		basic._brain->get_ideas()[i] = std::string("am dumb ") + std::to_string(i) + "\n";
-	for (int i = 0; i < 100; i++)
-		std::cout << basic._brain->get_ideas()[i] << std::endl;
+		basic.setIdea(std::string("am dumb ") + std::to_string(i) + "\n", i);
 	Dog tmp = basic;
 	Dog tmp2;
 	tmp2 = tmp;
-	std::cout << "XD?" << std::endl;
-}
-
-int main() {
-	f();
-	while(1);
+	for (int i = 0; i < 100; i++)
+		std::cout << tmp2.getBrain()->getIdeas()[i] << std::endl;
 }

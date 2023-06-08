@@ -22,10 +22,18 @@ Dog &Dog::operator=(Dog &obj) {
 	std::cout << "Dog copy assignment operator called" << std::endl;
 	_type = obj._type;
 	for (int i = 0; i < 100; i++)
-		_brain->get_ideas()[i] = obj._brain->get_ideas()[i];
+		_brain->getIdeas()[i] = obj._brain->getIdeas()[i];
 	return *this;
 }
 
 void	Dog::makeSound(void) const {
 	std::cout << "BarkK bark! >:v" << std::endl;
+}
+
+void	Dog::setIdea(std::string idea, int index) {
+	_brain->getIdeas()[index] = idea;
+}
+
+Brain *Dog::getBrain(void) {
+	return _brain;
 }

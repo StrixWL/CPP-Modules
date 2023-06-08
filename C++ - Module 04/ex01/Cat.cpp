@@ -22,10 +22,18 @@ Cat &Cat::operator=(Cat &obj) {
 	std::cout << "Cat copy assignment operator called" << std::endl;
 	_type = obj._type;
 	for (int i = 0; i < 100; i++)
-		_brain->get_ideas()[i] = obj._brain->get_ideas()[i];
+		_brain->getIdeas()[i] = obj._brain->getIdeas()[i];
 	return *this;
 }
 
 void	Cat::makeSound(void) const {
-	std::cout << "BarkK bark! >:v" << std::endl;
+	std::cout << "Meooooow :3" << std::endl;
+}
+
+void	Cat::setIdea(std::string idea, int index) {
+	_brain->getIdeas()[index] = idea;
+}
+
+Brain *Cat::getBrain(void) {
+	return _brain;
 }

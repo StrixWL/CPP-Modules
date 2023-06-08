@@ -19,6 +19,6 @@ Brain &Brain::operator=(Brain &obj) {
 	return *this;
 }
 
-std::string *Brain::get_ideas() {
+std::string *Brain::getIdeas() {
 	return _ideas;
 }

@@ -11,7 +11,7 @@ class Brain {
 		~Brain(); // destructor
 		Brain(Brain &obj); // copy constructor
 		Brain &operator=(Brain &obj); // copy assignment operator
-		std::string	*get_ideas();
+		std::string	*getIdeas();
 };
 
 
