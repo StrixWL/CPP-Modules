@@ -15,7 +15,7 @@ WrongAnimal::WrongAnimal(WrongAnimal &obj) {
 }
 
 WrongAnimal &WrongAnimal::operator=(WrongAnimal &obj) {
-	std::cout << "WrongAnimal default constructor called" << std::endl;
+	std::cout << "WrongAnimal copy assignment operator called" << std::endl;
 	_type = obj._type;
 	return *this;
 }

@@ -16,7 +16,7 @@ Cat::Cat(Cat &obj) {
 }
 
 Cat &Cat::operator=(Cat &obj) {
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "Cat copy assignment operator called" << std::endl;
 	_type = obj._type;
 	return *this;
 }

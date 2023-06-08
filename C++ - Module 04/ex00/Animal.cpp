@@ -15,7 +15,7 @@ Animal::Animal(Animal &obj) {
 }
 
 Animal &Animal::operator=(Animal &obj) {
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << "Animal copy assignment operator called" << std::endl;
 	_type = obj._type;
 	return *this;
 }

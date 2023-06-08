@@ -16,7 +16,7 @@ WrongCat::WrongCat(WrongCat &obj) {
 }
 
 WrongCat &WrongCat::operator=(WrongCat &obj) {
-	std::cout << "WrongCat default constructor called" << std::endl;
+	std::cout << "WrongCat copy assignment operator called" << std::endl;
 	_type = obj._type;
 	return *this;
 }
