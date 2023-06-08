@@ -6,13 +6,15 @@ Dog::Dog(): _brain(new Brain()) {
 	std::cout << "Dog default constructor called" << std::endl;
 	_type = "Dog";
 }
+
 Dog::~Dog() {
 	std::cout << "Dog destructor called" << std::endl;
 	delete _brain;
 }
 
-Dog::Dog(Dog &obj) {
+Dog::Dog(Dog &obj): _brain(new Brain()) {
 	std::cout << "Dog copy constructor called" << std::endl;
+	_type = "Dog";
 	*this = obj;
 }
 

@@ -3,8 +3,8 @@
 
 class Dog: public Animal {
 	private:
-		Brain *_brain;
 	public:
+		Brain *_brain;
 		Dog();
 		~Dog();
 		Dog(Dog &obj);

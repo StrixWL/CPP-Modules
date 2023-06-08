@@ -6,13 +6,15 @@ Cat::Cat(): _brain(new Brain()) {
 	std::cout << "Cat default constructor called" << std::endl;
 	_type = "Cat";
 }
+
 Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
 	delete _brain;
 }
 
-Cat::Cat(Cat &obj) {
+Cat::Cat(Cat &obj): _brain(new Brain()) {
 	std::cout << "Cat copy constructor called" << std::endl;
+	_type = "Cat";
 	*this = obj;
 }
 
@@ -25,5 +27,5 @@ Cat &Cat::operator=(Cat &obj) {
 }
 
 void	Cat::makeSound(void) const {
-	std::cout << "Meooooow :3" << std::endl;
+	std::cout << "BarkK bark! >:v" << std::endl;
 }
