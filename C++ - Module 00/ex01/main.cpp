@@ -1,6 +1,7 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 #include <iostream>
+#include <fstream>
 
 Contact	setContact(void) {
 		Contact newContact;
@@ -22,6 +23,7 @@ int main(void) {
 	while (!std::cin.eof()) {
 		std::cout << "salam sahbi, type a command:" << std::endl << "> ";
 		std::string input;
+		std::ifstream file("Makefile"); 
 		std::getline(std::cin, input);
 		if (input == "EXIT")
 			exit(0);

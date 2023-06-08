@@ -1,19 +1,19 @@
-#ifndef ANIMAL_HPP
+#ifndef AAnimal_HPP
 
 #include <string>
 
-class Animal {
+class AAnimal {
 	protected:
 		std::string _type;
 	public:
-		Animal();
-		virtual ~Animal();
-		Animal(Animal &obj);
-		Animal &operator=(Animal &obj);
+		AAnimal();
+		virtual ~AAnimal();
+		AAnimal(AAnimal &obj);
+		AAnimal &operator=(AAnimal &obj);
 		virtual void	makeSound(void) const;
 		std::string getType() const;
 };
 
 
-#define ANIMAL_HPP
+#define AAnimal_HPP
 #endif

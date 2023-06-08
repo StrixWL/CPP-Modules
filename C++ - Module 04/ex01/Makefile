@@ -1,2 +1,2 @@
 all:
-	c++ main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp -std=c++98 -Wall -Wextra -Werror -o "I don't want to set the world on fire" && ./"I don't want to set the world on fire"
+	c++ main.cpp AAnimal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp -std=c++98 -Wall -Wextra -Werror -o "I don't want to set the world on fire" && ./"I don't want to set the world on fire"

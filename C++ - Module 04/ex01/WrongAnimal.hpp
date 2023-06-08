@@ -1,4 +1,4 @@
-#ifndef WRONGANIMAL_HPP
+#ifndef WrongAnimal_HPP
 
 #include <string>
 
@@ -15,5 +15,5 @@ class WrongAnimal {
 };
 
 
-#define WRONGANIMAL_HPP
+#define WrongAnimal_HPP
 #endif

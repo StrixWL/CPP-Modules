@@ -5,9 +5,9 @@ WrongCat::WrongCat() {
 	std::cout << "WrongCat default constructor called" << std::endl;
 	_type = "WrongCat";
 }
+
 WrongCat::~WrongCat() {
 	std::cout << "WrongCat destructor called" << std::endl;
-
 }
 
 WrongCat::WrongCat(WrongCat &obj) {

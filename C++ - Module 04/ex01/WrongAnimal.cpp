@@ -4,6 +4,7 @@
 WrongAnimal::WrongAnimal() {
 	std::cout << "WrongAnimal default constructor called" << std::endl;
 }
+
 WrongAnimal::~WrongAnimal() {
 	std::cout << "WrongAnimal destructor called" << std::endl;
 }
@@ -24,5 +25,5 @@ std::string WrongAnimal::getType() const {
 }
 
 void	WrongAnimal::makeSound(void) const {
-	std::cout << "*definitely not an animal sound*" << std::endl;
+	std::cout << "*definitely not an AAnimal sound*" << std::endl;
 }
