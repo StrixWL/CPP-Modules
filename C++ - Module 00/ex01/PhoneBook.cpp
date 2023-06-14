@@ -27,7 +27,7 @@ void	PhoneBook::display(void) {
 	std::cout << "---------------------------------------------" << std::endl;
 	if (_index == 0 && !_filled)
 		std::cout << "                   (emtpy)                   " << std::endl;
-	for (int i = 0, k = _filled ? 8 : _index, j = _index; i < k; i++, j++) {
+	for (int i = 0, k = _filled? 8 : _index, j = _index; i < k; i++, j++) {
 		Contact *contact = _contacts + j % k;
 		std::cout << "|         " << i;
 		std::cout << "|" << formatFieldData(*contact->getDataAddr(firstName));
@@ -39,20 +39,17 @@ void	PhoneBook::display(void) {
 
 int	PhoneBook::requestIndex(void) {
 	std::string input;
-	std::cout << "Contact index you want to display: ";
-	while (!std::cin.eof()) {
+	std::cout << "Contact index you want to display: " << std::endl;
+	while (true) {
 		std::getline(std::cin, input);
-		size_t i = 0;
-		for (; i < input.size(); i++) {
-			if (!isdigit(input[i]))
-				break ;
-		}
-		if (i == input.size() && std::stoi(input) < 8) {
+		if (std::cin.eof())
+			break ;
+		if (input.size() == 1 && isdigit(input[0]) && std::stoi(input) < 8) {
 			std::cout << std::endl;
-			return std::stoi(input);
+			return _filled? (std::stoi(input) + _index) % 8 : std::stoi(input);
 		}
 		else
-			std::cout << "Input must be a positive integer and less than or equal to 7, please try again: ";
+			std::cout << "Input must be a positive integer and less than or equal to 7, please try again: " << std::endl;
 	}
 	std::cout << std::endl << "stdin closed, terminating the process.." << std::endl;
 	exit(0);

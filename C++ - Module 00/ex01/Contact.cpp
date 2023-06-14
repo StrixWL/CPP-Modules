@@ -6,6 +6,9 @@ Contact::Contact(void) {
 
 }
 
+Contact::Contact(std::string firstName, std::string lastName, std::string phoneNumber, std::string darkestSecret, std::string nickname): _firstName(firstName), _lastName(lastName), _phoneNumber(phoneNumber), _darkestSecret(darkestSecret), _nickname(nickname) {
+}
+
 std::string *Contact::getDataAddr(dataField field) {
 	switch (field) {
 	case firstName:
@@ -44,7 +47,7 @@ void Contact::requestData(dataField field) {
 			return ;
 		}
 		else
-			std::cout << "Field can't be empty, try again: ";
+			std::cout << "Field can't be empty, try again: " << std::endl;
 	}
 	std::cout << std::endl << "stdin closed, terminating the process.." << std::endl;
 	exit(0);

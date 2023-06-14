@@ -19,6 +19,7 @@ class Contact {
 		std::string	_nickname;
 	public:
 		Contact(void);
+		Contact(std::string firstName, std::string lastName, std::string phoneNumber, std::string darkestSecret, std::string nickname);
 		std::string	*getDataAddr(dataField field);
 		void		requestData(dataField field);
 		void		display(void);
