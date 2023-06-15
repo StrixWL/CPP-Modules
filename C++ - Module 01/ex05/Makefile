@@ -3,12 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bel-amri <clorensunity@gmail.com>          +#+  +:+       +#+         #
+#    By: med <med@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/02 16:45:04 by bel-amri          #+#    #+#              #
-#    Updated: 2023/06/03 13:58:22 by bel-amri         ###   ########.fr        #
+#    Updated: 2023/06/15 18:45:44 by med              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 all:
-	c++ main.cpp Harl.cpp -std=c++98 -Wall -Wextra -Werror -o "Harl 2.0" && ./"Harl 2.0"
+	c++ main.cpp Harl.cpp -std=c++98 -Wall -Wextra -Werror -o "Harl 2.0"

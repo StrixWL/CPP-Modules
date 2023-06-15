@@ -3,12 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bel-amri <clorensunity@gmail.com>          +#+  +:+       +#+         #
+#    By: med <med@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/02 16:45:04 by bel-amri          #+#    #+#              #
-#    Updated: 2023/06/03 14:54:50 by bel-amri         ###   ########.fr        #
+#    Updated: 2023/06/15 18:45:30 by med              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 all:
-	c++ main.cpp Harl.cpp -std=c++98 -Wall -Wextra -Werror -o "Harl filter" && ./"Harl filter" ERROR
+	c++ main.cpp Harl.cpp -std=c++98 -Wall -Wextra -Werror -o "Harl filter"

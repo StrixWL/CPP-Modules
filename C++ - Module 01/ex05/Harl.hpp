@@ -5,6 +5,7 @@
 
 class Harl {
 	private:
+		void (Harl::*pointer)(void);
 		void debug(void);
 		void info(void);
 		void warning(void);

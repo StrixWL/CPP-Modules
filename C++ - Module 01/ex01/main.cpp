@@ -2,10 +2,10 @@
 
 int main() {
 	int	N = 5;
-	Zombie *zombies = zombieHorde(N, "mamak");
+	Zombie *zombies = zombieHorde(N, "ZOMBIE");
 
 	while (N--)
 		zombies[N].announce();
 	delete[] zombies;
-	while (1);
+
 }
